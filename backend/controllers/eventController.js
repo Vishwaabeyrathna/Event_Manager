@@ -27,9 +27,7 @@ const EventController = {
         try {
             const db = require('../config/db');
 
-            // 2. OVERLAP CHECK
-            // We check if the New Event overlaps with ANY existing event.
-            // Logic: (ExistingStart < NewEnd) AND (ExistingEnd > NewStart)
+            //  OVERLAP CHECK
             const checkSql = 'SELECT id FROM events WHERE start_time < ? AND end_time > ?';
             
             // Note the order of params: [NewEndTime, NewStartTime]
