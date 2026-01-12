@@ -2,8 +2,7 @@ const mergeIntervals = (events) => {
     // 1. Edge Case: Handle empty input
     if (!events || events.length === 0) return [];
 
-    // 2. Pre-processing: Convert to timestamps ONCE for efficiency.
-    // This avoids creating new Date() objects repeatedly during the sort.
+
     const intervals = events.map(event => ({
         start: new Date(event.start_time).getTime(),
         end: new Date(event.end_time).getTime()
