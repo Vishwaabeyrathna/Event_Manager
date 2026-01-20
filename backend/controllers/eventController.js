@@ -14,7 +14,7 @@ const EventController = {
 
    // POST /api/events
     createEvent: async (req, res) => {
-        const { title, start_time, end_time, description } = req.body;
+        const { title, start_time, end_time, description } = req.body; 
         
         // 1. Basic Validation
         if (!title || !start_time || !end_time) {
